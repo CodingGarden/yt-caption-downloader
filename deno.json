@@ -1,0 +1,12 @@
+{
+  "tasks": {
+    "start": "deno run --unstable-kv --allow-env --allow-read --allow-net src/main.ts",
+    "format": "deno fmt",
+    "typecheck": "deno check src/**/*.ts"
+  },
+  "imports": {
+    "@std/dotenv": "jsr:@std/dotenv@^0.225.2",
+    "zod": "npm:zod@^3.23.8"
+  },
+  "license": "MIT"
+}
