@@ -1,11 +1,16 @@
 {
   "tasks": {
-    "start": "deno run --unstable-kv --allow-env --allow-read --allow-net src/main.ts",
+    "start": "deno run --unstable-kv --allow-write --allow-env --allow-read --allow-net src/main.ts",
+    "lint": "deno lint",
     "format": "deno fmt",
     "typecheck": "deno check src/**/*.ts"
   },
   "imports": {
+    "@b-fuze/deno-dom": "jsr:@b-fuze/deno-dom@^0.1.48",
     "@std/dotenv": "jsr:@std/dotenv@^0.225.2",
+    "@std/fs": "jsr:@std/fs@^1.0.5",
+    "@std/html": "jsr:@std/html@^1.0.3",
+    "@std/path": "jsr:@std/path@^1.0.7",
     "zod": "npm:zod@^3.23.8"
   },
   "license": "MIT"
