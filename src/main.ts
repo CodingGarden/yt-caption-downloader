@@ -60,10 +60,11 @@ if (import.meta.main) {
         } catch (error) {
           console.error(error);
         }
+        
+        await new Promise((resolve) => {
+          setTimeout(resolve, 5000 + (Math.random() * 5000));
+        });
       }
-      await new Promise((resolve) => {
-        setTimeout(resolve, 5000 + (Math.random() * 5000));
-      });
     }
 
     await kv.set(videosKey, allVideos);
